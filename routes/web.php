@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostsController::class, 'index'])->name('posts.index'); 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
-Route::get('/posts/{id}',[PostsController::class, 'show']);
-Route::post('/posts', [PostsController::class, 'store'])->name('posts.store');
+Route::resource('/articles', ArticleController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,4 +31,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
