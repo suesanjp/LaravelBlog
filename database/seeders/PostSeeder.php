@@ -17,5 +17,9 @@ class PostSeeder extends Seeder
             'title' => 'My first post',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         ]);
+        DB::table('posts')->insert([
+            'title' => 'My second post',
+            'body' => '日本語もいけます',
+        ]);
     }
 }
