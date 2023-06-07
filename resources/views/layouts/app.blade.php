@@ -17,7 +17,7 @@
 
     </main>
     <footer>
-        &copy; Laravel8 入門から開発実践まで
+        &copy; Mini Blog
     </footer>
 </body>
 </html>
