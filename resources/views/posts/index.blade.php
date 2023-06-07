@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<x-post-layout>
+  <x-slot name="title">
+    記事一覧
+  </x-slot>
   <ul>
     @foreach ($posts as $post)
       <li>{{ $post->title }}</li>
@@ -14,3 +9,4 @@
   </ul>
 </body>
 </html>
+</x-post-layout>
