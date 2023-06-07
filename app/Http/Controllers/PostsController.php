@@ -25,4 +25,11 @@ class PostsController extends Controller
             'post' => $post,
         ]);
     }
+
+    public function create()
+    {
+        $post = new Post();
+        $data = ['post' => $post];
+        return view('posts.create', $data);
+    }
 }

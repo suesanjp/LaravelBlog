@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostsController::class, 'index']); 
+Route::get('/', [PostsController::class, 'index'])->name('posts.index'); 
 
+Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
 Route::get('/posts/{id}',[PostsController::class, 'show']);
+Route::post('/posts', [PostsController::class, 'store'])->name('posts.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
