@@ -1,5 +1,4 @@
-<x-app-layout>
-    <x-slot name="header">
+<x-article-layout>
         <articlele class="article-detail">
             <h1 class="article-title">{{ $article->title }}</h1>
             <div class="article-info">{{ $article->created_at }}</div>
@@ -14,4 +13,4 @@
                 <button type="submit">削除</button>
             </form>
         </div>
-</x-app-layout>
+</x-article-layout>

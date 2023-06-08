@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="site-title">ミニブログ</div>
+    <header class="py-8 bg-primary">
+        <div class="text-center">ミニブログ</div>
     </header>
     <main class="container">
         {{ $slot }}
