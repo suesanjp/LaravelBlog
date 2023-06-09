@@ -17,11 +17,24 @@
 <body>
     <header class="py-8 bg-primary">
         <div class="text-center">ミニブログ</div>
+        @if (Route::has('login'))
+            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="btn btn-primary">マイページ</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-primary">ログイン</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn btn-primary">登録</a>
+                    @endif
+                @endauth
+            </div>
+        @endif
     </header>
-    <main class="container">
+    <main class="container py-10 px-40">
         {{ $slot }}
     </main>
-    <footer>
+    <footer class="text-center">
         &copy; Mini Blog
     </footer>
 </body>
