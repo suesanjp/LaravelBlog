@@ -14,11 +14,14 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            gridTemplateColumns: {
+                'autofit': 'repeat(auto-fit, minmax(240px, 1fr))'
+            },
         },
     },
 
     plugins: [forms, require("daisyui")],
     daisyui: {
-        themes: ["cupcake"],
+        themes: ["corporate"],
     },
 };
