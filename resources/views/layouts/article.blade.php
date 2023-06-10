@@ -14,19 +14,19 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
-    <header class="py-8 bg-blue-100">
-        <h1 class="text-primary text-center text-lg">ミニブログ</h1>
+<body class="bg-base-200 font-jp">
+    <header class="h-60 py-8 bg-shore">
+        <h1 class="text-base-100 text-center text-2xl">ミニブログ</h1>
         @if (Route::has('login'))
             <div class="sm:top-0 sm:right-0 p-6 text-right z-10">
                 @auth
                     <div class="dropdown dropdown-bottom dropdown-end">
-                        <label tabindex="0" class="btn btn-primary m-1">{{ Auth::user()->name }}</label>
+                        <label tabindex="0" class="btn btn-primary ml-1">{{ Auth::user()->name }}</label>
                         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <a :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
-                                </a>
+                                </x-dropdown-link>
                             </li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
@@ -50,10 +50,9 @@
             </div>
         @endif
     </header>
-    <div class="bg-base-300">
-        <main class="container max-w-screen-xl bg-base-100 mx-auto">
-            {{ $slot }}
-        </main>
+    <main class="container max-w-screen-xl mx-auto">
+        {{ $slot }}
+    </main>
     </div>
     <footer class="footer p-10 bg-neutral text-neutral-content">
         <div>
@@ -87,7 +86,6 @@
                         </path>
                     </svg></a>
             </div>
-        </div>
     </footer>
 </body>
 

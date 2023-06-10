@@ -1,5 +1,4 @@
 import forms from "@tailwindcss/forms";
-import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -12,10 +11,23 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                jp: [
+                    "Hiragino Sans",
+                    "ヒラギノ角ゴシック",
+                    "メイリオ",
+                    "Meiryo",
+                    "MS Ｐゴシック",
+                    "MS PGothic",
+                    "sans-serif",
+                    "YuGothic",
+                    "Yu Gothic",
+                ],
             },
             gridTemplateColumns: {
-                'autofit': 'repeat(auto-fit, minmax(240px, 1fr))'
+                autofit: "repeat(auto-fit, minmax(240px, 1fr))",
+            },
+            backgroundImage: {
+                shore: "url('/images/shore.jpg')",
             },
         },
     },
