@@ -4,6 +4,6 @@
         <form action="{{ route('articles.store') }}" method="post">
             @include('articles.form')
             <button class="btn btn-primary" type="submit">投稿する</button>
-            <a class="btn btn-secondary" href="{{ route('articles.index') }}">キャンセル</a>
+            <a class="btn border-primary" href="{{ route('articles.index') }}">キャンセル</a>
         </form>
 </x-article-layout>
