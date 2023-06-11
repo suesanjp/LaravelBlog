@@ -1,10 +1,10 @@
 <x-article-layout>
     <x-slot name="header">
         @include('commons.errors')
-        <form class="btn btn-primary" action="{{ route('articles.update', $article) }}" method="post">
+        <form  action="{{ route('articles.update', $article) }}" method="post">
             @method('patch')
             @include('articles.form')
-            <button class="btn border-primary" type="submit">更新する</button>
-            <a href="{{ route('articles.show', $article) }}">キャンセル</a>
+            <button class="btn btn-primary" type="submit">更新する</button>
+            <a class="btn border-primary" href="{{ route('articles.show', $article) }}">キャンセル</a>
         </form>
 </x-article-layout>
