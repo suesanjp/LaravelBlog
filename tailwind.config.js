@@ -26,9 +26,6 @@ export default {
             gridTemplateColumns: {
                 autofit: "repeat(auto-fit, minmax(240px, 1fr))",
             },
-            backgroundImage: {
-                shore: "url('/images/shore.jpg')",
-            },
         },
     },
 

@@ -49,7 +49,7 @@
             @endif
         </div>
         {{-- Background Image --}}
-        <div class="hero min-h-fit" style="background-image: url('/images/empire.webp');">
+        <div class="hero min-h-fit bg-top" style="background-image: url('/images/empire.webp');">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-md my-8">
