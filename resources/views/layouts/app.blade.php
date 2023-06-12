@@ -5,7 +5,7 @@
     @endif
 
     <!-- Page Content -->
-    <main>
+    <main class="container max-w-screen-xl px-4 mx-auto">
         {{ $slot }}
     </main>
 @include('components.footer')

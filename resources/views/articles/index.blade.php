@@ -1,4 +1,6 @@
-<x-article-layout>
+<x-app-layout>
+    <x-slot name="header">
+    </x-slot>
     <div class="grid grid-cols-autofit gap-14">
         @foreach ($articles as $article)
             <article class="bg-base-100 card w-72 shadow-xl mx-auto">
@@ -13,4 +15,4 @@
             </article>
         @endforeach
     </div>
-</x-article-layout>
+</x-app-layout>

@@ -37,6 +37,7 @@ class ArticleController extends Controller
             'body' => 'required'
         ]);
         $article = new Article();
+        $article->user_id = \Auth::id();
         $article->title = $request->title;
         $article->body = $request->body;
         $article->save();
@@ -58,6 +59,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
+        $this->authorize($article);
         $data = ['article' => $article];
         return view('articles.edit', $data);
     }
@@ -67,6 +69,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        $this->authorize($article);
         $this->validate($request, [
             'title' => 'required|max:255',
             'body' => 'required'
@@ -82,6 +85,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        $this->authorize($article);
         $article->delete();
         return redirect(route('articles.index'));
     }
