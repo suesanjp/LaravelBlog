@@ -11,12 +11,12 @@
         </articlele>
         @can('update', $article)
             <div class="flex justify-start mt-6">
-                <a class="btn btn-accent mr-2" href="{{ route('articles.edit', $article) }}">編集</a>
+                <a class="btn btn-primary mr-2" href="{{ route('articles.edit', $article) }}">編集</a>
                 <form onsubmit="return confirm('本当に削除しますか？')" action="{{ route('articles.destroy', $article) }}"
                     method="post">
                     @csrf
                     @method('delete')
-                    <button class="btn btn-warning border-2" type="submit">削除</button>
+                    <button class="btn btn-error border-2" type="submit">削除</button>
                 </form>
             </div>
         @endcan
