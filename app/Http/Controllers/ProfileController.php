@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Article;
 
 class ProfileController extends Controller
 {
@@ -56,5 +57,13 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+    public function index()
+    {
+        $articles = \Auth::user()->articles()->orderBy('created_at', 'desc')->get();
+        $data = [
+            'articles' => $articles,
+        ];
+        return view('profile', $data);
     }
 }
