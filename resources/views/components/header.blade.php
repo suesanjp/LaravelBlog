@@ -52,10 +52,9 @@
         <div class="hero min-h-fit bg-top" style="background-image: url('/images/empire.webp');">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md my-8">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
-                        exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <div class="max-w-md my-12">
+                    <h1 class="mb-5 text-5xl font-bold">How's your day</h1>
+                    <p class="mb-5">Write down what happened today, what you learned, the music you listened to, and the food you ate.</p>
                     <a class="btn btn-primary" href="{{ route('articles.index') }}">BACK TO TOP</a>
                 </div>
             </div>
