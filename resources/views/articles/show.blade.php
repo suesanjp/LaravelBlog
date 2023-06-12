@@ -3,10 +3,11 @@
     </x-slot>
     <div class="max-w-3xl mx-auto">
         <articlele>
-            <h1 class="text-xl mb-4">{{ $article->title }}</h1>
-            <div class="text-sm text-secondary mb-4">{{ $article->created_at }}</div>
+            <h1 class="text-xl break-words mb-4">{{ $article->title }}</h1>
+            <div class="text-sm text-secondary mb-2">{{ $article->created_at }}</div>
+            <div class="text-sm text-secondary">{{ $article->user->name, 22 }}</div>
             <div class="divider"></div>
-            <div class="leading-6">{!! nl2br(e($article->body)) !!}</div>
+            <div class="leading-6 break-words">{!! nl2br(e($article->body)) !!}</div>
         </articlele>
         @can('update', $article)
             <div class="flex justify-start mt-6">
